@@ -6,4 +6,12 @@ const letterToBraille = {
   e: [1,0,0,0,0,0],
 };
 
-export default word => word.map(letter => letterToBraille[letter]);
+const brailleGenerator = word => {
+	const result = [];
+  for (var i = 0, len = word.length; i < len; i++) {
+    result.push(letterToBraille[word[i]]);
+  }
+  return result;
+};
+
+export default brailleGenerator;
